@@ -1,0 +1,31 @@
+ext {
+
+    publish = [
+            version: "5.3.11"
+    ]
+
+    date = new Date().format("yyMMdd")
+    android = [
+            compileSdkVersion: 28,
+            minSdkVersion    : 16,
+            targetSdkVersion : 28,
+            versionCode      : 1,
+            versionName      : "${publish.version}.${date}"
+    ]
+
+    despVersion = [
+            support: "1.0.0"
+    ]
+
+    desp = [
+            // support
+            appcompat    : "androidx.appcompat:appcompat:${despVersion.support}",
+            recyclerview : "androidx.recyclerview:recyclerview:${despVersion.support}",
+            cardview     : "androidx.cardview:cardview:${despVersion.support}",
+            leakcanary   : "com.squareup.leakcanary:leakcanary-android:1.5.4",
+            lottie       : "com.airbnb.android:lottie:2.5.4",
+            baseRvAdapter: "com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.40",
+            glide        : "com.github.bumptech.glide:glide:4.8.0",
+            picasso      : "com.squareup.picasso:picasso:2.5.2"
+    ]
+}
